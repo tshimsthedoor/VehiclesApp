@@ -16,14 +16,16 @@ namespace VehiclesApp
             this.vehicleType = "Boat";
             this.vehicleBehavior = new DoNothing();
         }
-        public override void DisplayDetails()
-        {
-            Console.WriteLine("Current status of the boat: ");
-        }
-
+        
         public override void SetVehicleBehavior(ICapability behavior)
         {
             this.vehicleBehavior = behavior;
+        }
+        public override void DisplayDetails()
+        {
+            Console.WriteLine("Current status of the boat: ");
+            Console.WriteLine($"Registration number: {this.registrationNumber}");
+            vehicleBehavior.CurrentCapability();
         }
     }
 }

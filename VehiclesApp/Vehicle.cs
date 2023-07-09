@@ -8,8 +8,7 @@ namespace VehiclesApp
 {
     abstract class Vehicle
     {
-        //public abstract void Fly();
-        //public abstract void Float();
+        
         protected string vehicleType;
         protected ICapability vehicleBehavior;
         protected string registrationNumber = String.Empty;

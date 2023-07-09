@@ -4,24 +4,25 @@ namespace VehiclesApp
 {
     class Airplane : Vehicle
     {
-        public override void DisplayDetails()
+
+        public Airplane(string registrationId)
         {
-            throw new NotImplementedException();
+            this.registrationNumber = registrationId;
+            this.vehicleType = "Airplane";
+            this.vehicleBehavior = new DoNothing();
+
         }
-
-        //public override void Float()
-        //{
-        //    throw new NotImplementedException();
-        //}
-
-        //public override  void Fly()
-        //{
-        //    Console.WriteLine("I liek to fly");
-        //}
-
+       
         public override void SetVehicleBehavior(ICapability behavior)
         {
-            throw new NotImplementedException();
+            this.vehicleBehavior = behavior;
         }
+        public override void DisplayDetails()
+        {
+            Console.WriteLine("Current status of the airplane: ");
+            Console.WriteLine($"Registration number: {this.registrationNumber}");
+            vehicleBehavior.CurrentCapability();
+        }
+
     }
 }
