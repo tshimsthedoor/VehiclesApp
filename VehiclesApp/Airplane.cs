@@ -2,14 +2,14 @@
 
 namespace VehiclesApp
 {
-    class Airplane : IVehicle
+    class Airplane : Vehicle
     {
-        public void Float()
+        public override void Float()
         {
             throw new NotImplementedException();
         }
 
-        public void Fly()
+        public override  void Fly()
         {
             Console.WriteLine("I liek to fly");
         }

@@ -6,14 +6,14 @@ using System.Threading.Tasks;
 
 namespace VehiclesApp
 {
-    class Boat : IVehicle
+    class Boat : Vehicle
     {
-        public void Float()
+        public override void Float()
         {
             Console.WriteLine("I liek to float");
         }
 
-        public void Fly()
+        public override void Fly()
         {
             throw new NotImplementedException();
         }

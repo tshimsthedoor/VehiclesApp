@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace VehiclesApp
 {
-    interface IVehicle
+    abstract class Vehicle
     {
-        void Fly();
-        void Float();
+        public abstract void Fly();
+        public abstract void Float();
     }
 }
