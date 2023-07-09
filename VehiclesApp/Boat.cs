@@ -8,9 +8,9 @@ namespace VehiclesApp
 {
     class Boat : Vehicle
     {
-        string registrationId;
+        
 
-        public Boat(string registration)
+        public Boat(string registrationId)
         {
             this.registrationNumber = registrationId;
             this.vehicleType = "Boat";
@@ -18,22 +18,12 @@ namespace VehiclesApp
         }
         public override void DisplayDetails()
         {
-            throw new NotImplementedException();
+            Console.WriteLine("Current status of the boat: ");
         }
-
-        //public override void Float()
-        //{
-        //    Console.WriteLine("I liek to float");
-        //}
-
-        //public override void Fly()
-        //{
-        //    throw new NotImplementedException();
-        //}
 
         public override void SetVehicleBehavior(ICapability behavior)
         {
-            throw new NotImplementedException();
+            this.vehicleBehavior = behavior;
         }
     }
 }
