@@ -10,5 +10,10 @@ namespace VehiclesApp
     {
         public abstract void Fly();
         public abstract void Float();
+        protected string vehicleType;
+        protected ICapability vehicleBehavior;
+        protected string registrationNumber;
+        public abstract void SetVehicleBehavior(ICapability behavior);
+        public abstract void DisplayDetails();
     }
 }
