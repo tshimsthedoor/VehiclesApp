@@ -8,12 +8,30 @@ namespace VehiclesApp
 {
     class Boat : Vehicle
     {
-        public override void Float()
+        string registrationId;
+
+        public Boat(string registration)
         {
-            Console.WriteLine("I liek to float");
+            this.registrationNumber = registrationId;
+            this.vehicleType = "Boat";
+            this.vehicleBehavior = new DoNothing();
+        }
+        public override void DisplayDetails()
+        {
+            throw new NotImplementedException();
         }
 
-        public override void Fly()
+        //public override void Float()
+        //{
+        //    Console.WriteLine("I liek to float");
+        //}
+
+        //public override void Fly()
+        //{
+        //    throw new NotImplementedException();
+        //}
+
+        public override void SetVehicleBehavior(ICapability behavior)
         {
             throw new NotImplementedException();
         }
